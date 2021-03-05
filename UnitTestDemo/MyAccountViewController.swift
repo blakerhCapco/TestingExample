@@ -9,11 +9,9 @@ import UIKit
 
 class MyAccountViewController: UIViewController {
 
-    //MARK: Properties
+    //MARK: - Properties
     var myAccountViewModel: MyAccountViewModel? {
-        didSet {
-            updateView()
-        }
+        didSet { updateView() }
     }
     
     private struct MyAccountSegmentIndex {
@@ -22,18 +20,19 @@ class MyAccountViewController: UIViewController {
         static let negitive = 2
     }
     
-    //MARK: Outlets
+    //MARK: - Outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var accountStatusIndicatorView: UIView!
     @IBOutlet weak var myAccountSegmentedControl: UISegmentedControl!
     
-    //MARK: Lifecycle
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         myAccountViewModel = MyAccountViewModel(with: MockEntities.positiveEntity)
     }
 
+    //MARK: - Methods
     func updateView() {
         guard let viewModel = myAccountViewModel else { return }
         nameLabel.text = viewModel.name
@@ -49,8 +48,8 @@ class MyAccountViewController: UIViewController {
         }
     }
     
+    //MARK: - Actions
     @IBAction func updateUIStateSegmentedControl(_ sender: Any) {
-        
         switch myAccountSegmentedControl.selectedSegmentIndex {
         case MyAccountSegmentIndex.positive:
             myAccountViewModel = MyAccountViewModel(

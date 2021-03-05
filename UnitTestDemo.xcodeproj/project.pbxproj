@@ -21,6 +21,7 @@
 		AC8CF99525F1E3190060D0C6 /* MockEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CF99425F1E3190060D0C6 /* MockEntities.swift */; };
 		AC8CF99E25F1E51E0060D0C6 /* MockEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CF99D25F1E51E0060D0C6 /* MockEntity.swift */; };
 		AC8CF9B125F1EA380060D0C6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CF9B025F1EA380060D0C6 /* Colors.swift */; };
+		AC8CF9BF25F1F6700060D0C6 /* MyAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CF9BE25F1F6700060D0C6 /* MyAccountViewModelTests.swift */; };
 		EE4D3379B6CF2AAE5E67CDE3 /* Pods_UnitTestDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4C0771A86DF8B895CC6F56 /* Pods_UnitTestDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		AC8CF99425F1E3190060D0C6 /* MockEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEntities.swift; sourceTree = "<group>"; };
 		AC8CF99D25F1E51E0060D0C6 /* MockEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEntity.swift; sourceTree = "<group>"; };
 		AC8CF9B025F1EA380060D0C6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AC8CF9BE25F1F6700060D0C6 /* MyAccountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewModelTests.swift; sourceTree = "<group>"; };
 		B3E0BFB7FFE88CF254CCF7B2 /* Pods-UnitTestDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestDemoTests.release.xcconfig"; path = "Target Support Files/Pods-UnitTestDemoTests/Pods-UnitTestDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF672555B4B62B9DC317932E /* Pods-UnitTestDemo-UnitTestDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestDemo-UnitTestDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-UnitTestDemo-UnitTestDemoUITests/Pods-UnitTestDemo-UnitTestDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF5DFD9864F72BFC2F2E1C19 /* Pods_UnitTestDemo_UnitTestDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestDemo_UnitTestDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 			children = (
 				AC04553525F1DC2000586ACC /* UnitTestDemoTests.swift */,
 				AC04553725F1DC2000586ACC /* Info.plist */,
+				AC8CF9BE25F1F6700060D0C6 /* MyAccountViewModelTests.swift */,
 			);
 			path = UnitTestDemoTests;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8CF9BF25F1F6700060D0C6 /* MyAccountViewModelTests.swift in Sources */,
 				AC04553625F1DC2000586ACC /* UnitTestDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
