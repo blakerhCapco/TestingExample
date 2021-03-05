@@ -18,7 +18,7 @@ struct MyAccountViewModel {
      */
     init(with entity: MockEntity) {
         name = entity.name
-        amount = "$\(entity.currency)"
+        amount = MyAccountViewModel.USDCurrencyFormatter(entity.currency)
         
         switch entity.debtStatus {
         case DebtStatus.none.rawValue:
@@ -31,6 +31,21 @@ struct MyAccountViewModel {
             debtStatus = DebtStatus.none
         }
     }
+    
+    private static func USDCurrencyFormatter(_ amount: Double) -> String {
+        var result: String
+        
+        if amount >= 0 {
+            result = "$\(amount)"
+        } else {
+            var amountString = String(amount)
+            amountString.removeFirst()
+            result = "-$\(amountString)"
+        }
+        
+        return result
+    }
+    
 }
 
 enum DebtStatus: String {

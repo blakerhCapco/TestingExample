@@ -15,7 +15,6 @@
 		AC04552625F1DC1F00586ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC04552425F1DC1F00586ACC /* Main.storyboard */; };
 		AC04552825F1DC1F00586ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC04552725F1DC1F00586ACC /* Assets.xcassets */; };
 		AC04552B25F1DC1F00586ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC04552925F1DC1F00586ACC /* LaunchScreen.storyboard */; };
-		AC04553625F1DC2000586ACC /* UnitTestDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04553525F1DC2000586ACC /* UnitTestDemoTests.swift */; };
 		AC04554125F1DC2000586ACC /* UnitTestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04554025F1DC2000586ACC /* UnitTestDemoUITests.swift */; };
 		AC8CF98E25F1DF2F0060D0C6 /* MyAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CF98D25F1DF2F0060D0C6 /* MyAccountViewModel.swift */; };
 		AC8CF99525F1E3190060D0C6 /* MockEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8CF99425F1E3190060D0C6 /* MockEntities.swift */; };
@@ -58,7 +57,6 @@
 		AC04552A25F1DC1F00586ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC04552C25F1DC1F00586ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC04553125F1DC2000586ACC /* UnitTestDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC04553525F1DC2000586ACC /* UnitTestDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestDemoTests.swift; sourceTree = "<group>"; };
 		AC04553725F1DC2000586ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC04553C25F1DC2000586ACC /* UnitTestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC04554025F1DC2000586ACC /* UnitTestDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestDemoUITests.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 		AC04551D25F1DC1F00586ACC /* UnitTestDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AC8CF9AC25F1EA1D0060D0C6 /* Theming */,
 				AC04551E25F1DC1F00586ACC /* AppDelegate.swift */,
 				AC04552025F1DC1F00586ACC /* SceneDelegate.swift */,
 				AC04552225F1DC1F00586ACC /* MyAccountViewController.swift */,
@@ -159,6 +156,7 @@
 				AC04552425F1DC1F00586ACC /* Main.storyboard */,
 				AC04552925F1DC1F00586ACC /* LaunchScreen.storyboard */,
 				AC04552C25F1DC1F00586ACC /* Info.plist */,
+				AC8CF9AC25F1EA1D0060D0C6 /* Theming */,
 				AC04552725F1DC1F00586ACC /* Assets.xcassets */,
 			);
 			path = UnitTestDemo;
@@ -167,9 +165,8 @@
 		AC04553425F1DC2000586ACC /* UnitTestDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC04553525F1DC2000586ACC /* UnitTestDemoTests.swift */,
-				AC04553725F1DC2000586ACC /* Info.plist */,
 				AC8CF9BE25F1F6700060D0C6 /* MyAccountViewModelTests.swift */,
+				AC04553725F1DC2000586ACC /* Info.plist */,
 			);
 			path = UnitTestDemoTests;
 			sourceTree = "<group>";
@@ -468,7 +465,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8CF9BF25F1F6700060D0C6 /* MyAccountViewModelTests.swift in Sources */,
-				AC04553625F1DC2000586ACC /* UnitTestDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
