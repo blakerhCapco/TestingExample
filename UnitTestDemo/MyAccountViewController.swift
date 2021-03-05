@@ -10,26 +10,32 @@ import UIKit
 class MyAccountViewController: UIViewController {
 
     //MARK: Properties
-    var sampleViewModel: SampleViewModel? {
+    var myAccountViewModel: MyAccountViewModel? {
         didSet {
             updateView()
         }
     }
     
+    private struct MyAccountSegmentIndex {
+        static let positive = 0
+        static let neutral = 1
+        static let negitive = 2
+    }
+    
     //MARK: Outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
-    @IBOutlet weak var accountAmountSegmentedControl: UISegmentedControl!
     @IBOutlet weak var accountStatusIndicatorView: UIView!
+    @IBOutlet weak var myAccountSegmentedControl: UISegmentedControl!
     
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        sampleViewModel = SampleViewModel(entity: MockEntities.positiveEntity)
+        myAccountViewModel = MyAccountViewModel(with: MockEntities.positiveEntity)
     }
 
     func updateView() {
-        guard let viewModel = sampleViewModel else { return }
+        guard let viewModel = myAccountViewModel else { return }
         nameLabel.text = viewModel.name
         currencyLabel.text = viewModel.amount
         
@@ -43,4 +49,24 @@ class MyAccountViewController: UIViewController {
         }
     }
     
+    @IBAction func updateUIStateSegmentedControl(_ sender: Any) {
+        
+        switch myAccountSegmentedControl.selectedSegmentIndex {
+        case MyAccountSegmentIndex.positive:
+            myAccountViewModel = MyAccountViewModel(
+                with: MockEntities.positiveEntity
+            )
+        case MyAccountSegmentIndex.neutral:
+            myAccountViewModel = MyAccountViewModel(
+                with: MockEntities.someDebitEntity
+            )
+        case MyAccountSegmentIndex.negitive:
+            myAccountViewModel = MyAccountViewModel(
+                with: MockEntities.negitiveEntity
+            )
+        default:
+            break
+        }
+    }
+
 }

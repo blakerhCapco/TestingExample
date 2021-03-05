@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct MockEntity {
+    let currency: Double
+    let debtStatus: String
+    let name: String
+}

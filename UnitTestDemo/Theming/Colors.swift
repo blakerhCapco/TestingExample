@@ -5,4 +5,10 @@
 //  Created by bhrs on 3/4/21.
 //
 
-import Foundation
+import UIKit
+
+struct Colors {
+    static let green = UIColor.systemGreen
+    static let yellow = UIColor.systemYellow
+    static let red = UIColor.systemRed
+}

@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Account View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MyAccountViewController" customModule="UnitTestDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODk-Zb-u24">
+                                <rect key="frame" x="20" y="58" width="85.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urd-1W-CgU">
+                                <rect key="frame" x="0.0" y="418" width="414" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jjc-E5-LRi">
+                                <rect key="frame" x="150.5" y="710" width="113" height="32"/>
+                                <segments>
+                                    <segment title="+"/>
+                                    <segment title="+/-"/>
+                                    <segment title="-"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updateUIStateSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="z5q-Pr-6Pa"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0F-JQ-ZYR">
+                                <rect key="frame" x="359" y="60" width="35" height="35"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="L3r-Mw-hs5"/>
+                                    <constraint firstAttribute="height" constant="35" id="daU-zg-Cfs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="urd-1W-CgU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="53M-M2-Bss"/>
+                            <constraint firstItem="D0F-JQ-ZYR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ODk-Zb-u24" secondAttribute="trailing" constant="253.5" id="8IP-55-GKS"/>
+                            <constraint firstItem="Jjc-E5-LRi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DyA-im-M8r"/>
+                            <constraint firstItem="Jjc-E5-LRi" firstAttribute="top" relation="lessThanOrEqual" secondItem="urd-1W-CgU" secondAttribute="bottom" constant="232" id="EeD-mk-9be"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Jjc-E5-LRi" secondAttribute="bottom" constant="121" id="FZS-ze-Zri"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D0F-JQ-ZYR" secondAttribute="trailing" constant="20" id="Ibf-z5-8Fk"/>
+                            <constraint firstItem="urd-1W-CgU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MoX-h9-Z6u"/>
+                            <constraint firstItem="D0F-JQ-ZYR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="RrI-dm-NEg"/>
+                            <constraint firstItem="ODk-Zb-u24" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h7I-sj-Ua4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="urd-1W-CgU" secondAttribute="trailing" id="xMB-uR-5N2"/>
+                            <constraint firstItem="ODk-Zb-u24" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="xYb-9a-pGt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jjc-E5-LRi" secondAttribute="trailing" constant="85" id="yRg-td-8zA"/>
+                            <constraint firstItem="Jjc-E5-LRi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="zOI-eE-b0I"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountStatusIndicatorView" destination="D0F-JQ-ZYR" id="NKt-zc-63a"/>
+                        <outlet property="currencyLabel" destination="urd-1W-CgU" id="CaA-AV-4s0"/>
+                        <outlet property="myAccountSegmentedControl" destination="Jjc-E5-LRi" id="4bw-UD-X6Q"/>
+                        <outlet property="nameLabel" destination="ODk-Zb-u24" id="IGS-A5-ana"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="-37.5"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
